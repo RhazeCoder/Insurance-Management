@@ -1,0 +1,57 @@
+Juan Luna
+55
+1969-06-21
+male
+9876543211
+juanluna@gmail.com
+Juan Luna Shrine, Badoc, Ilocos Norte
+Antonio Luna
+Sibling
+9123456789
+antonioluna@gmail.com
+life
+10
+annually
+4500
+2020-06-21
+2024-11-21
+-
+=====
+Alice Guo
+34
+1990-01-07
+female
+9876543211
+aliceguo@gmail.com
+Barangay 69, Banban, Tarlac
+Shiela Guo
+sibling
+9123456789
+shielaguo@gmail.com
+health
+5
+annually
+12000
+2021-01-01
+2024-12-01
+-
+=====
+Justine Agcanas
+19
+2005-06-27
+male
+9282271131
+agcanasjustine1@gmail.com
+Saludares, Dingras, Ilocos Norte
+Justine Agcanas
+ako rin
+9685744640
+agcanasjustine1@outlook.com
+health
+10
+annually
+10000
+2022-08-28
+2024-11-28
+-
+=====
