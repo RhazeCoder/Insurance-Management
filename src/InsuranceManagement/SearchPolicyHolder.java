@@ -41,7 +41,7 @@ public class SearchPolicyHolder {
         System.out.println("\n Beneficiary Info");
         System.out.println("  Name: " + details[7]);
         System.out.println("  Relationship w/ Policy Holder: " + details[8]);
-        System.out.println("  Phone #: " + details[9]);
+        System.out.println("  Phone #: 0" + details[9]);
         System.out.println("  Email: " + details[10]);
         System.out.println("\n Membership Info");
         System.out.println("  Insurance Type: " + details[11] + " Insurance");

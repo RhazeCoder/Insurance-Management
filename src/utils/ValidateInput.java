@@ -15,6 +15,26 @@ public class ValidateInput {
 	private static BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 	private static FileSystem fs = new FileSystem();
 
+	private static boolean isValidDate(String input) throws IOException {
+		try {
+			String[] parts = input.split("/");
+			int month = Integer.parseInt(parts[0]);
+			int day = Integer.parseInt(parts[1]);
+			int year = Integer.parseInt(parts[2]);
+			
+			if (month == 2 && day == 29) {
+				return LocalDate.of(year, 1, 1).isLeapYear();
+			} else if (month == 2 && day > 28) {
+				return false;
+			}
+			
+			return true;
+			
+		} catch(Exception e) {
+			return false;
+		}
+	}
+	
 	public LocalDate birthday(String user_prompt) throws IOException {
 		LocalDate currentDate = LocalDate.now();
 		LocalDate date = null;
@@ -25,6 +45,13 @@ public class ValidateInput {
 				System.out.print(user_prompt);
 				String input = read.readLine();
 				date = LocalDate.parse(input, dateFormat);
+
+				if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+				 
 				age = Period.between(date, currentDate).getYears();
 
 				if (age <= 18 || age >= 65) {
@@ -71,6 +98,13 @@ public class ValidateInput {
 
 	        try {
 	            date = LocalDate.parse(input, dateFormat);
+	            
+	            if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+	            
 	            age = Period.between(date, currentDate).getYears();
 
 	            if (age <= 18 || age >= 65) {
@@ -138,6 +172,12 @@ public class ValidateInput {
 	            }
 	            
 	            date = LocalDate.parse(input, dateFormat);
+	            
+	            if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
 	            gap = Period.between(date, currentDate).getDays();
 	            if (gap < 0) {
 	                date = null;
@@ -314,6 +354,13 @@ public class ValidateInput {
 	            }
 	            
 	            date = LocalDate.parse(input, dateFormat);
+	            
+	            if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+	            
 	            gap = Period.between(date, currentDate).getDays();
 	            if (gap < 0) {
 	                date = null;
@@ -380,6 +427,13 @@ public class ValidateInput {
 				System.out.print(user_prompt);
 				String input = read.readLine();
 				date = LocalDate.parse(input, dateFormat);
+				
+				if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+				
 				gap = Period.between(date, currentDate).getDays();
 				if (gap < 0) {
 					date = null;
@@ -472,6 +526,13 @@ public class ValidateInput {
 			try {
 				String input = prompt(user_prompt);
 				date = LocalDate.parse(input, dateFormat);
+				
+				if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+				
 			} catch (DateTimeParseException e) {
 				System.out.println("Invalid format. Please use (dd/mm/yyyy).");
 			} catch (InputMismatchException e) {
@@ -531,6 +592,13 @@ public class ValidateInput {
 				System.out.print(user_prompt);
 				String input = read.readLine();
 				date = LocalDate.parse(input, dateFormat);
+				
+				if (!isValidDate(input)) {
+					System.out.println("Invalid date. Please check your input.");
+	                date = null;
+	                continue;
+	            }
+				
 				gap = Period.between(date, currentDate).getDays();
 				if (gap < 0) {
 					date = null;

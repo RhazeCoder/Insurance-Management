@@ -44,7 +44,7 @@ public class EditPolicyHolder {
         String newSex = validate.editSex("Enter new sex: ");
         details.set(3, newSex == null ? details.get(3) : newSex);
 
-        System.out.println("\nCurrent Mobile Number: " + details.get(4));
+        System.out.println("\nCurrent Mobile Number: 0" + details.get(4));
         long newMobileNumber = validate.editMobileNumber("Enter new mobile number: ");
         details.set(4, newMobileNumber == 0 ? details.get(4) : String.valueOf(newMobileNumber));
 
@@ -71,7 +71,7 @@ public class EditPolicyHolder {
         String newRelationship = validate.editPrompt("Enter new relationship: ");
         details.set(8, newRelationship == null ? details.get(8) : newRelationship);
 
-        System.out.println("\nCurrent Mobile Number: " + details.get(9));
+        System.out.println("\nCurrent Mobile Number: 0" + details.get(9));
         long newBMobileNumber = validate.editMobileNumber("Enter new mobile number: ");
         details.set(9, newBMobileNumber == 0 ? details.get(9) : String.valueOf(newBMobileNumber));
 
@@ -156,8 +156,6 @@ public class EditPolicyHolder {
 
         System.out.println("\nInformation updated successfully!\n");
     }
-
-
 
     private static List<String> getMembers(List<String> records) {
         List<String> members = new ArrayList<>();

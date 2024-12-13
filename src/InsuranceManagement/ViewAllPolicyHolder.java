@@ -43,7 +43,7 @@ public class ViewAllPolicyHolder {
         System.out.println("\n Beneficiary Info");
         System.out.println("  Name: " + details.get(7));
         System.out.println("  Relationship w/ Policy Holder: " + details.get(8));
-        System.out.println("  Phone #: " + details.get(9));
+        System.out.println("  Phone #: 0" + details.get(9));
         System.out.println("  Email: " + details.get(10));
         System.out.println("\n Membership Info");
         System.out.println("  Insurance Type: " + details.get(11) + " Insurance");
