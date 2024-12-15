@@ -199,7 +199,7 @@ public class EditPolicyHolder {
                     editMembership(details, name);
                     return;
                 case 'd':
-                    System.out.println("Editing canceled!\n");
+                    System.out.println("\nEditing canceled!\n");
                     break;
                 default:
                     System.out.println("Invalid Input!\n");
