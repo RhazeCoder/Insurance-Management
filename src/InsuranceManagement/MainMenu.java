@@ -47,10 +47,10 @@ public class MainMenu {
         do {
         	sys.cls();
             System.out.println("\n\t+|  MAIN MENU  |+");
-            System.out.println("\t  [a] Add");
-            System.out.println("\t  [b] View All");
-            System.out.println("\t  [c] Search");
-            System.out.println("\t  [d] Edit");
+            System.out.println("\t  [a] Add Policyholder");
+            System.out.println("\t  [b] View All Policyholder");
+            System.out.println("\t  [c] Search Policyholder");
+            System.out.println("\t  [d] Edit Policyholder");
             System.out.println("\t  [e] Exit");
             System.out.print("\nEnter choice: ");
             choice = scan.next().charAt(0);

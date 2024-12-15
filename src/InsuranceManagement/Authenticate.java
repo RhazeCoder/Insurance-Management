@@ -20,7 +20,7 @@ public class Authenticate {
     
     public boolean start() {
     	while (true) {
-    		System.out.print("Enter PIN: ");
+    		System.out.print("Enter 4-Digit PIN: ");
     		int enteredPin = validatePINInput(); 
     		
     		if (enteredPin == PINCODE) {

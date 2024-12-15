@@ -17,12 +17,12 @@ public class AddPolicyHolder {
 	private static ValidateInput validate = new ValidateInput();
 	
 	private static String addData() throws IOException {
-	    System.out.println("\n Policy Holder Info");
+	    System.out.println("\n Policyholder Info");
 	    String ph_name = validate.prompt("  Name: ");
 	    boolean nameExist = validate.checkExistance(ph_name);
 	    
 	    if (nameExist) {
-	    	System.out.println("\nPolicy Holder with that name already exist!");
+	    	System.out.println("\nPolicyholder with that name already exist!");
 	    	return "existed";
 	    }
 	    
@@ -35,7 +35,7 @@ public class AddPolicyHolder {
 
 	    System.out.println("\n Beneficiary Info");
 	    String b_name = validate.prompt("  Name: ");
-	    String b_relationship = validate.prompt("  Relationship with policy holder: ");
+	    String b_relationship = validate.prompt("  Relationship with policyholder: ");
 	    long b_mobileNumber = validate.mobileNumber("  Mobile number: ");
 	    String b_email = validate.email("  Email: ");
 
@@ -48,9 +48,9 @@ public class AddPolicyHolder {
 	    LocalDate lastPaymentDate = validate.lastPayment("  Last payment date (mm/dd/yyyy): ");
 
 	    String data = ph_name + "\n" + ph_age + "\n" + ph_birthday + "\n" + sex + "\n" + ph_mobileNumber + "\n" + 
-	    			  ph_email +  "\n" + ph_address + "\n" +  b_name + "\n" + b_relationship + "\n" + b_mobileNumber + "\n" + 
-	    			  b_email + "\n" + insurance_type + "\n" + premium_year + "\n" + payment_type + "\n" + 
-	    			  payment_amount + "\n" + startDate + "\n" + lastPaymentDate + "\n-\n=====";
+	    			  ph_email +  "\n" + ph_address + "\n" +  b_name + "\n" + b_relationship + "\n" +
+	    			  b_mobileNumber + "\n" + b_email + "\n" + insurance_type + "\n" + premium_year + "\n" + 
+	    			  payment_type + "\n" + payment_amount + "\n" + startDate + "\n" + lastPaymentDate + "\n-\n=====";
 
 	    return data;
 	}

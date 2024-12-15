@@ -30,7 +30,7 @@ public class SearchPolicyHolder {
         LocalDate lastPayment = LocalDate.parse(details[16]);
 
         System.out.println("=============== Member Information ===============");
-        System.out.println(" Policy Holder Info");
+        System.out.println(" Policyholder Info");
         System.out.println("  Name: " + details[0]);
         System.out.println("  Age: " + details[1]);
         System.out.println("  Birthdate: " + birthDate.format(dateFormat));
@@ -40,7 +40,7 @@ public class SearchPolicyHolder {
         System.out.println("  Address: " + details[6]);
         System.out.println("\n Beneficiary Info");
         System.out.println("  Name: " + details[7]);
-        System.out.println("  Relationship w/ Policy Holder: " + details[8]);
+        System.out.println("  Relationship w/ Policyholder: " + details[8]);
         System.out.println("  Phone #: 0" + details[9]);
         System.out.println("  Email: " + details[10]);
         System.out.println("\n Membership Info");
@@ -83,11 +83,11 @@ public class SearchPolicyHolder {
             return;
         }
         
-        String ph_name = validate.prompt("\nSearch Policy Holder Name: ");
+        String ph_name = validate.prompt("\nSearch Policyholder Name: ");
         boolean nameExist = validate.checkExistance(ph_name);
 
         if (!nameExist) {
-            System.out.println("\nPolicy Holder with that name does not exist!\n");
+            System.out.println("\nPolicyholder with that name does not exist!\n");
             return;
         }
         

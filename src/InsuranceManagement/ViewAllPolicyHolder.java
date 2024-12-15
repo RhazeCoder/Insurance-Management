@@ -32,7 +32,7 @@ public class ViewAllPolicyHolder {
         LocalDate birthDate = LocalDate.parse(details.get(2));
         
         System.out.println("=============== Member Information ===============");
-        System.out.println(" Policy Holder Info");
+        System.out.println(" Policyholder Info");
         System.out.println("  Name: " + details.get(0));
         System.out.println("  Age: " + details.get(1));
         System.out.println("  Birthdate: " + birthDate.format(dateFormat));
@@ -42,7 +42,7 @@ public class ViewAllPolicyHolder {
         System.out.println("  Address: " + details.get(6));
         System.out.println("\n Beneficiary Info");
         System.out.println("  Name: " + details.get(7));
-        System.out.println("  Relationship w/ Policy Holder: " + details.get(8));
+        System.out.println("  Relationship w/ Policyholder: " + details.get(8));
         System.out.println("  Phone #: 0" + details.get(9));
         System.out.println("  Email: " + details.get(10));
         System.out.println("\n Membership Info");

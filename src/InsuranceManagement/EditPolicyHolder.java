@@ -27,7 +27,7 @@ public class EditPolicyHolder {
         LocalDate currentBirthdate = LocalDate.parse(details.get(2));
         
         sys.cls();
-        System.out.println("\nEditing Policy Holder Info (press enter to skip)");
+        System.out.println("\nEditing Policyholder Info (press enter to skip)");
         
         System.out.println("\nCurrent Name: " + details.get(0));
         String newName = validate.editName("Enter new name: ", details.get(0));
@@ -181,7 +181,7 @@ public class EditPolicyHolder {
         char choice;
         do {
             System.out.println("\n Choose Info to Edit");
-            System.out.println("  [a] Policy Holder Info");
+            System.out.println("  [a] Policyholder Info");
             System.out.println("  [b] Beneficiary Info");
             System.out.println("  [c] Membership Info");
             System.out.println("  [d] Cancel");
@@ -221,11 +221,11 @@ public class EditPolicyHolder {
         String ph_name = "";
         
         while (!nameExist) {
-            ph_name = validate.editPrompt("\nEdit Policy Holder Name: ");
+            ph_name = validate.editPrompt("\nEdit Policyholder Name: ");
             nameExist = validate.checkExistance(ph_name);
             
             if (!nameExist) {
-                System.out.println("\nPolicy Holder with that name does not exist!");
+                System.out.println("\nPolicyholder with that name does not exist!");
                 
                 System.out.print("\nTypo? Would you like to try again (y/n): ");
                 char choice = scan.next().charAt(0);

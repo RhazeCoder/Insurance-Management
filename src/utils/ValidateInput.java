@@ -56,7 +56,7 @@ public class ValidateInput {
 
 				if (age <= 18 || age >= 65) {
 					date = null;
-					System.out.println("Policy holder must be 18 to 65 years old.");
+					System.out.println("Policyholder must be 18 to 65 years old.");
 				}
 			} catch (DateTimeParseException e) {
 				System.out.println("Invalid format. Please use (mm/dd/yyyy).");
@@ -109,7 +109,7 @@ public class ValidateInput {
 
 	            if (age <= 18 || age >= 65) {
 	                date = null;
-	                System.out.println("Policy holder must be 18 to 65 years old.");
+	                System.out.println("Policyholder must be 18 to 65 years old.");
 	            } else {
 	                break;
 	            }
@@ -420,7 +420,7 @@ public class ValidateInput {
 	public LocalDate lastPayment(String user_prompt) throws IOException {
 		LocalDate currentDate = LocalDate.now();
 		LocalDate date = null;
-		int gap = 0;
+		int gap = 0; 
 
 		while (date == null) {
 			try {
