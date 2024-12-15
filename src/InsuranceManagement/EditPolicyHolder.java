@@ -225,15 +225,8 @@ public class EditPolicyHolder {
             nameExist = validate.checkExistance(ph_name);
             
             if (!nameExist) {
-                System.out.println("\nPolicyholder with that name does not exist!");
-                
-                System.out.print("\nTypo? Would you like to try again (y/n): ");
-                char choice = scan.next().charAt(0);
-                scan.nextLine();
-                
-                if (choice != 'y') return;
-                
-                sys.cls();
+                System.out.println("\nPolicyholder with that name does not exist!\n");
+                return;
             }
         }
         
