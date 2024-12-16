@@ -21,6 +21,7 @@ public class MainMenu {
                 add.start();
                 break;
             case 'b':
+            	sys.printSpaces();
                 viewall.start();
                 sys.pause();
                 break;

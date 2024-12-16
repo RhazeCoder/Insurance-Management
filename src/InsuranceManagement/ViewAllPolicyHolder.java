@@ -5,32 +5,32 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import utils.Calculate;
 import utils.FileSystem;
 
 public class ViewAllPolicyHolder {
-	private static Calculate calculate = new Calculate();
-	private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    private static Calculate calculate = new Calculate();
+    private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     private static FileSystem fs = new FileSystem();
-    
+
     private static void displayInfo(String member) throws IOException {
         BufferedReader reader = new BufferedReader(new StringReader(member));
-        List<String> details = new ArrayList<>();
-        
+        List<String> details = new LinkedList<>();
+
         String line;
         while ((line = reader.readLine()) != null) {
             details.add(line);
         }
-        
+
         int premiumYear = Integer.parseInt(details.get(12));
         LocalDate startDate = LocalDate.parse(details.get(15));
         LocalDate endDate = calculate.endDate(startDate, premiumYear);
         LocalDate lastPayment = LocalDate.parse(details.get(16));
         LocalDate birthDate = LocalDate.parse(details.get(2));
-        
+
         System.out.println("=============== Member Information ===============");
         System.out.println(" Policyholder Info");
         System.out.println("  Name: " + details.get(0));
@@ -57,11 +57,10 @@ public class ViewAllPolicyHolder {
         System.out.println("=================================================\n\n");
     }
 
-    
     private static List<String> getMembers(List<String> records) {
-        List<String> members = new ArrayList<>();
+        List<String> members = new LinkedList<>();
         StringBuilder member = new StringBuilder();
-        
+
         for (String record : records) {
             if (record.equals("=====")) {
                 members.add(member.toString());
@@ -70,24 +69,24 @@ public class ViewAllPolicyHolder {
                 member.append(record).append("\n");
             }
         }
-        
+
         if (member.length() > 0) {
             members.add(member.toString().trim());
         }
-        
+
         return members;
     }
-    
+
     public void start() throws IOException {
         List<String> records = List.of(fs.read());
-        
+
         if (records.size() <= 0) {
-        	System.out.println("No records!\n");
-        	return;
+            System.out.println("No records!\n");
+            return;
         }
-        
+
         List<String> members = getMembers(records);
-        
+
         for (String member : members) {
             displayInfo(member);
         }

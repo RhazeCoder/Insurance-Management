@@ -17,7 +17,6 @@ public class SearchPolicyHolder {
     private static Sys sys = new Sys();
     private static ValidateInput validate = new ValidateInput();
     
-    // Define the date formatter
     private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     
     private static void displayInfo(String member) throws IOException {
